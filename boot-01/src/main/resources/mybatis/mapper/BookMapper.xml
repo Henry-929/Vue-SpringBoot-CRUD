@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vueboot.mapper.BookMapper">
+
+    <select id="selectAll" resultType="Book">
+        select * from book
+    </select>
+
+    <insert id="add">
+        insert into book(`id`,`name`,`author`) values (#{id},#{name},#{author})
+    </insert>
+
+    <select id="selectById" resultType="Book">
+        select id,name,author from book where id=#{id}
+    </select>
+
+    <update id="update">
+        update book set name=#{name},author=#{author} where id=#{id}
+    </update>
+
+    <delete id="deteleById">
+        delete from book where id=#{id}
+    </delete>
+
+</mapper>
