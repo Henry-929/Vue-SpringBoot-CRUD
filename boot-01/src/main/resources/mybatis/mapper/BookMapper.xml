@@ -3,6 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.vueboot.mapper.BookMapper">
+    <!--指定自定义cache全限定名-->
+    <cache type="com.vueboot.cache.RedisCache"/>
 
     <select id="selectAll" resultType="Book">
         select * from book

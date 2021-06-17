@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/lib?useSSL=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: Zzy190015
+    driver-class-name: com.mysql.jdbc.Driver
+
+  redis:
+    host: 39.96.42.244
+    port: 6379
+    database: 0
+    password: 123456
+
+server:
+  port: 8181
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.vueboot.bean
+
+pagehelper:
+  reasonable: true
+
+logging:
+  level:
+    root: info
+    com.vueboot.mapper: debug
