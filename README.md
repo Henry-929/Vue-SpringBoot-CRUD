@@ -1,2 +1,2 @@
 # Vue-SpringBoot-CRUD
-springboot + mybatis + redis + vue 2x + elementui
+springboot + mybatis + shiro + redis + vue 2x + elementui
