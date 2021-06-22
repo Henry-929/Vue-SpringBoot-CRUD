@@ -5,6 +5,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
+
+/**
+ * 自定义spring容器获取接口，获取容器
+ */
 @Component
 public class ApplicationContextUtil implements ApplicationContextAware {
 

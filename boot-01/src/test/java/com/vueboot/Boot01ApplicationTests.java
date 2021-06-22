@@ -2,6 +2,8 @@ package com.vueboot;
 
 import com.vueboot.bean.Book;
 import com.vueboot.service.BookService;
+import com.vueboot.service.UserService;
+import com.vueboot.utils.JwtUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.cache.Cache;
 import org.junit.jupiter.api.Test;
@@ -22,6 +24,22 @@ class Boot01ApplicationTests {
     @Autowired
     private BookService bookService;
 
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    JwtUtil jwtUtil;
+
+    @Test
+    void jwtTest(){
+        System.out.println(jwtUtil.getTtl());
+    }
+
+    @Test
+    void queryUserByUsername(){
+        System.out.println(userService.queryUserByUsername("kuangshen"));
+    }
+
     @Test
     void add(){
         bookService.add(new Book(null,"redis","张三"));
@@ -39,6 +57,11 @@ class Boot01ApplicationTests {
         bookService.selectAll();
         System.out.println("==============");
         bookService.selectAll();
+    }
+
+    @Test
+    void queryById(){
+        System.out.println(userService.queryById(1));
     }
 
 }

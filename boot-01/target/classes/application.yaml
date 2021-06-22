@@ -25,3 +25,9 @@ logging:
   level:
     root: info
     com.vueboot.mapper: debug
+
+
+jwt:
+  config:
+    key: saas-ihrm
+    ttl: 3600000
